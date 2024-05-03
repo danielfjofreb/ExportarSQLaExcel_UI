@@ -1,0 +1,27 @@
+﻿<Window x:Class="ExportarSQLaExcel_UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExportarSQLaExcel_UI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox ToolTip="Ingrese nombre del servidor" Name="txtServidor" HorizontalAlignment="Left" Height="16" Margin="114,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" TextChanged="txtServidor_TextChanged" LostFocus="txtServidor_LostFocus"/>
+        <TextBox ToolTip="Base de datos de donde sacará la informacion para exportar a Excel" Name="txtDB" HorizontalAlignment="Left" Height="16" Margin="114,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" TextChanged="txtDB_TextChanged" LostFocus="txtDB_LostFocus"/>
+        <TextBox ToolTip="Usuario que utiliza en el servidor de Base de Datos" Name="txtUsuario" HorizontalAlignment="Left" Height="16" Margin="114,156,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" TextChanged="txtUsuario_TextChanged" LostFocus="txtUsuario_LostFocus"/>
+        <PasswordBox Name="txtContraseña" HorizontalAlignment="Left" Height="16" Margin="114,201,0,0"  VerticalAlignment="Top" Width="222" PasswordChanged="txtContraseña_PasswordChanged"/>
+        <TextBox Name="txtSelect" ToolTip="ingrese campos de la o las tablas, ejemplo: ID, Descripcion" HorizontalAlignment="Left" Height="16" Margin="487,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" TextChanged="txtSelect_TextChanged" LostFocus="txtSelect_LostFocus"/>
+        <TextBox Name="txtFrom" ToolTip="Ingrese tablas, ejemplo, Tabla1, Tabla2" HorizontalAlignment="Left" Height="16" Margin="487,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" TextChanged="txtFrom_TextChanged" LostFocus="txtFrom_LostFocus"/>
+        <TextBox Name="txtWhere" ToolTip="Ingrese condicionales, ejemplo: ID = 1 and campo = 'Hola'" HorizontalAlignment="Left" Height="16" Margin="487,173,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" TextChanged="txtWhere_TextChanged" LostFocus="txtWhere_LostFocus"/>
+        <Label Content="Servidor:" HorizontalAlignment="Left" Margin="56,73,0,0" VerticalAlignment="Top"/>
+        <Label Content="Base de Datos:" HorizontalAlignment="Left" Margin="25,107,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.509,-0.089"/>
+        <Label Content="Usuario:" HorizontalAlignment="Left" Margin="56,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.379,2.883"/>
+        <Label Content="Contraseña:" HorizontalAlignment="Left" Margin="40,196,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.001,0.343"/>
+        <Label Content="Select:" HorizontalAlignment="Left" Margin="445,75,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.029,0.588"/>
+        <Label Content="From:" HorizontalAlignment="Left" Margin="447,118,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.835,0.626"/>
+        <Label Content="Where:" HorizontalAlignment="Left" Margin="440,168,0,0" VerticalAlignment="Top"/>
+        <Button ToolTip="Click para generar Excel" Content="Generar" HorizontalAlignment="Left" Margin="543,319,0,0" VerticalAlignment="Top" Height="38" Width="130" Click="Button_Click"/>
+
+    </Grid>
+</Window>
